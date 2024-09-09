@@ -19,7 +19,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Peter Marinello
 
   #### Je startniveau:
-  Blauw
+  Rood
 
   #### Je focus:
   Responsive
