@@ -8,7 +8,7 @@
 }
 
 .scrollableElement::-webkit-scrollbar {
-    width: 0px; /* This hides the scrollbar and its track */
+    width: 0px; 
 }
 
 * {
@@ -18,7 +18,10 @@
 }
 
 
-
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 img {
 	max-width: 100%;
@@ -29,7 +32,7 @@ header {
 	justify-content: center;
 	position: fixed;
 	width: 100vw;
-	margin-top: 1.5em;
+	margin-top: 1.2em;
 	z-index: 10;
 }
 
@@ -75,9 +78,9 @@ nav:first-of-type div > button {
 }
 
 
-nav:first-of-type div > button:nth-child(2) {
+/* nav:first-of-type div > button:nth-child(2) {
 	display: ;
-}
+} */
 
 nav:first-of-type div > button:nth-child(2) {
 	display: none;
@@ -306,7 +309,7 @@ section:first-of-type img {
 	align-items: center;
 }
 .appInfoSection h2 {
-	font-size: clamp(2em, 8.9vw, 10em);
+	font-size: clamp(2em, 8.5vw, 10em);
 	color: #421700;
 	font-weight: 100;
 }
@@ -318,7 +321,7 @@ section:first-of-type img {
 }
 
 .appInfoSection p{
-	font-size: 1.4em;
+	font-size: 1em;
 	color: #421700;
 	font-weight: 100;
 	line-height: 1.2em;
@@ -360,7 +363,6 @@ section:first-of-type img {
 	display: flex;
 	justify-content: center;
 	background-color: #421700;
-	font-size: ;
 	color: white;
 	text-decoration: none;
 	padding: 1em 0em;
@@ -371,6 +373,285 @@ section:first-of-type img {
 }
 
 .backgroundBox:hover .yellowBox {
-    transform: scale(10); /* Adjust the scaling value as needed */
-    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    transform: scale(10); 
+    transition: transform 1s ease-in-out; 
+}
+
+.howItWorksSection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+}
+
+.howItWorksSection > *{
+	width: 90vw;
+}
+.howItWorksSection .bordauxButton{
+	margin: 0;
+}
+
+.howItWorksSection > h2 {
+	display: none;
+}
+.howItWorksSection-A{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.howItWorksSection-A .image-holder-container {
+	overflow: hidden;
+	border-radius: 2em;
+	background-color: transparent;
+    width: 90vw; 
+    height: auto; 
+    transform: skewY(-5deg)  translateY(-05%); 
+    border-radius: 2.5em; 
+    background-color: transparent; 
+	aspect-ratio: 9/13;
+}
+
+.howItWorksSection-A .image-holder img {
+    transform-origin: top left; 
+    transform: skewY(5deg) translateY(-0%) scale(1); 
+    width: 100%; 
+    object-fit: contain; 
+	background-color: transparent;
+	border-radius: 2.5em;
+}
+
+
+.howItWorks-B-container {
+    overflow: hidden;
+    border-radius: 2.5em;
+    transform: translateY(-16%);
+    
+	width: 90vw;
+}
+
+.howItWorks-B {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+    overflow: hidden;
+    border-radius: 2.5em;
+    transform: skewY(-5deg) translateY(15%);
+	height: 100%;
+    background-color: #FFD918;
+    padding: 1em;
+    padding-bottom: 5.5rem;
+}
+
+.howItWorks-B > * {
+	transform: skewY(5deg);
+}
+
+.howItWorks-B .bordauxButton {
+	width: 100%;
+	margin-top: 1.5em;
+	border-radius: 3em;
+	margin-bottom: 0.2em;
+}
+
+.howItWorks-B h3 {
+	font-size: clamp(1em, 2em, 10em);
+	color: #421700;
+	margin: 0.2rem;
+	margin-top: 2em;
+	font-weight: 100;
+}
+
+.howItWorks-B p {
+	font-size: clamp(0.5em, 1.1em, 10em);
+	margin: 0.2rem;
+	margin-top: 1.5em;
+}
+
+.howItWorksSection-B {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	margin-bottom: 3em;
+}
+
+.howItWorksSection-B h2 {
+	font-weight: 100;
+	font-size: clamp(1em, 08vw, 6em);
+}
+
+
+.howItWorksSection-B > div {
+	border-color: rgba(87, 87, 87, 25%);
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 2.5em;
+	padding: 2em 1em;
+}
+
+.howItWorksSection-B > div h3 {
+	margin-top: 0.2em;
+	font-size: clamp(1em, 06vw, 6em);
+}
+
+.howItWorksSection-B > div p {
+	margin-top: 0.9em;
+	font-size: clamp(0.1em, 4vw, 5em);
+}
+
+.howItWorksSection-B > div a {
+	text-decoration: none;
+	color: #421700;
+	font-weight: bold;
+	font-size: clamp(0.8em, 3vw, 5em);
+}
+
+.howItWorksSection-B > div div {
+	margin-top: 1em;
+}
+
+.howItWorksSection-B > div img:nth-child(1) {
+	border-radius: 1.5em;
+}
+
+.howItWorksSection-B > div img:nth-child(2) {
+	filter: brightness(0) saturate(100%) invert(10%) sepia(51%) saturate(3565%) hue-rotate(24deg) brightness(94%) contrast(105%);
+	width: 0.9em;
+	margin-left: 0.5em;
+}
+
+.solarTreesSection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+}
+
+.solarTreesSection .image-holder-container {
+	overflow: hidden;
+	border-radius: 2em;
+	background-color: transparent;
+    width: 90vw; 
+    height: auto; 
+    transform: skewY(-5deg)  translateY(-09%); 
+    border-radius: 2.5em; 
+    background-color: transparent; 
+}
+
+.solarTreesSection .image-holder img {
+    transform-origin: top left; 
+    transform: skewY(5deg) translateY(-0%) scale(1); 
+    width: 100%; 
+    object-fit: contain; 
+	background-color: transparent;
+	border-radius: 2.5em;
+}
+
+.solarTrees-container {
+    overflow: hidden;
+    border-radius: 2.5em;
+    transform: translateY(-16%);
+	width: 90vw;
+}
+
+.solarTrees {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+    overflow: hidden;
+    border-radius: 2.5em;
+    transform: skewY(-5deg) translateY(15%);
+	height: 100%;
+    background-color: #e5deff;
+    padding: 1em;
+    padding-bottom: 5.5rem;
+}
+
+.solarTrees > * {
+	transform: skewY(5deg);
+}
+
+.solarTrees .bordauxButton {
+	width: 100%;
+	margin-top: 1.5em;
+	border-radius: 3em;
+	margin-left: 0;
+	margin-bottom: 0.2em;
+}
+
+.solarTrees h3 {
+	font-size: clamp(1em, 2em, 10em);
+	color: #421700;
+	margin: 0.2rem;
+	margin-top: 2em;
+	font-weight: 100;
+}
+
+.solarTrees p {
+	font-size: clamp(0.5em, 1.1em, 10em);
+	margin: 0.2rem;
+	margin-top: 1.5em;
+}
+
+.energyFriendly > div a {
+	text-decoration: none;
+	color: #421700;
+	font-weight: bold;
+	font-size: clamp(0.8em, 3vw, 5em);
+}
+
+.energyFriendly > div img:nth-child(2) {
+	filter: brightness(0) saturate(100%) invert(10%) sepia(51%) saturate(3565%) hue-rotate(24deg) brightness(94%) contrast(105%);
+	width: 0.9em;
+	margin-left: 0.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.businessSection > div a {
+	text-decoration: none;
+	color: #421700;
+	font-weight: bold;
+	font-size: clamp(0.8em, 3vw, 5em);
+}
+
+.businessSection div > img:nth-child(1) {
+	filter: brightness(0) saturate(100%) invert(10%) sepia(51%) saturate(3565%) hue-rotate(24deg) brightness(94%) contrast(105%);
+	width: 0.9em;
+	margin-left: 0.5em;
+}
+
+.newsLetterSection > div a {
+	text-decoration: none;
+	color: #421700;
+	font-weight: bold;
+	font-size: clamp(0.8em, 3vw, 5em);
+}
+
+.newsLetterSection > div img:nth-child(2) {
+	filter: brightness(0) saturate(100%) invert(10%) sepia(51%) saturate(3565%) hue-rotate(24deg) brightness(94%) contrast(105%);
+	width: 0.9em;
+	margin-left: 0.5em;
+}
+
+.newsLetterSection > div {
+	display: flex;
+	justify-content: center;
+	border-style: solid;
+	border-width: 1px;
+	padding: 0.5em 1em;
+	border-radius: 1em;
 }
