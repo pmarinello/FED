@@ -989,56 +989,64 @@ header {
 	background-color: #fff4c5;
 	display: flex;
 	flex-direction: column;
-	align-items: baseline;
+	align-items: center;
 	width: 90vw;
 	border-radius: 2em;
 	margin-bottom: 2.5em;
 }
 
-
-
-
-.newsLetterSection div > div:last-of-type a {
-	text-decoration: none;
-	color: #421700;
-	font-weight: bold;
-	font-size: clamp(0.8em, 4vw, 5em);
+.newsLetterSection div:last-of-type {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 90%;
+	margin-bottom:1.5em;
+	gap: 1.5em;
 }
 
-.newsLetterSection > div:first-of-type {
+
+
+
+
+.signUpButton {
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	background-color: transparent;
+	border-style: solid;
+	border-radius: 2em;
+	border-color: #421700;
+	align-items: center;
+	color: #421700;
+	font-weight: bold;
+	font-size: clamp(0.8em, 4vw, 5em);
+	padding: 0.5em;
 }
 
-.newsLetterSection > div:first-of-type img {
-	width: 16em;
-	transform: translateY(-2.1em);
-	margin-bottom: 2em;
-}
-
-
-.newsLetterSection > div img:nth-child(2) {
+.signUpButton img {
+	width: 1em;
+	padding: 0em 0.5em;
 	filter: brightness(0) saturate(100%) invert(10%) sepia(51%) saturate(3565%) hue-rotate(24deg) brightness(94%) contrast(105%);
-	width: 0.9em;
-	margin-left: 0.5em;
 }
 
 
-.newsLetterSection div:last-of-type {
-	padding: 0em 1.5em;
+.signUpButton p {
+	margin: 1em;
+	padding: 0;
 }
+
+
+
+
+
+
+
+
 
 
 .newsLetterSection div:last-of-type h4 {
 	font-weight: 100;
 	font-size: clamp(1.5em, 4vw, 4em);
-	margin-bottom: 1em;
-}
-
-.newsLetterSection div:last-of-type p {
-	font-weight: 100;
-	font-size: clamp(0.9em, 1vw, 5em);
 	margin-bottom: 1em;
 }
 
@@ -1087,7 +1095,7 @@ footer {
 .footerMenu ul > li {
 	font-size: clamp(1.1em, 4vw, 4em);
 	font-weight: 800;
-	width: calc(inherit + 15%);
+	/* width: calc(inherit + 15%); */
 	display: flex;
 	flex-direction: row;
 	align-items:center;
@@ -1472,6 +1480,237 @@ footer {
 	margin: 0;
 	margin-bottom: 1em;
 }
+
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+}
+
+.hidden {
+    display: none;
+}
+
+.success-message {
+    color: green;
+    margin-top: 20px;
+}
+
+.popup-overlay{
+	border-radius: 0;
+	height: 100vh;
+	position: fixed;
+}
+
+.popup{
+	max-width: 70vw;
+	padding: 2em;
+	padding-right: 2.6em;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: start;
+	gap: 1.5em;
+	border-radius: 1.5em;
+}
+
+.popup h2 {
+	text-align: start;
+}
+
+#signupForm {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 0.5em;
+	width: 100%;
+	font-size: 1.2em;
+}
+
+#signupForm label {
+	font-weight: 600;
+}
+
+#signupForm button {
+	width: inherit;
+	display: flex;
+	justify-content: center;
+	border-radius: 1.5em;
+	border: none;
+	background-color: #FFD918;
+	align-items: center;
+	color: #421700;
+	font-weight: bold;
+	font-size: clamp(0.8em, 4vw, 5em);
+	padding: 1.2em 5px;
+}
+
+
+
+#signupForm input {
+	padding-bottom: 5px;
+	padding-top: 5px;
+	border: 0;
+	border-radius: 0;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	width: inherit;
+	font-size: 1em;
+}
+
+#signupForm input:focus{
+	outline: none;
+	border-color: #18aaff;
+}
+
+#signupForm input:focus::placeholder {
+	color: transparent;
+}
+
+
+
+#signupForm input:last-of-type {
+	margin-bottom: 1em;
+}
+
+
+input.valid {
+	color: green;
+}
+
+#signupForm > div:nth-child(1) {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	width: 100%;
+	gap: 0.5em;
+	margin-bottom: 1.5em;
+}
+
+#signupForm > div:nth-child(1) p{
+	margin-top: -1.3em;
+	font-size: 0.8em;
+}
+
+
+#signupForm > div:nth-child(2) {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	width: 100%;
+	gap: 0.5em;
+	margin-bottom: 1.5em;
+}
+
+#signupForm > div:nth-child(2) p{
+	margin-top: -1.3em;
+	font-size: 0.8em;
+}
+
+input.invalid {
+    color: rgb(166, 0, 0);
+}
+
+.checkbox-label {
+	font-size: 0.7rem;
+}
+.promo-container {
+	position: relative;
+	display: flex;
+}
+
+.promoContainer{
+	margin-bottom: 1em;
+	cursor: pointer;
+	width: 100%;
+}
+
+.promoContainer label{
+	cursor: pointer;
+	font-size: clamp(0.5em, 0.7em, 1.5em);
+}
+
+.checkbox {
+    position: absolute;  /* Makes the checkbox absolute */
+    top: 0;
+    left: 0;
+    width: inherit;  /* Makes the checkbox take the full width of its container */
+    height: inherit; /* Makes the checkbox take the full height of its container */
+    opacity: 0%;   /* Hides the default checkbox appearance */
+    cursor: pointer; /* Adds a pointer cursor for better UX */
+	z-index: 20;
+	pointer-events: none;
+
+}
+
+.checkbox-container {
+    position: relative;  /* Sets the container as a relative positioning context */
+    width: 1.5em;       /* Adjust the width as needed */
+    height: 1.5em;      /* Adjust the height as needed */
+    border: 2px solid #c5c5c5; /* Border for the container */
+    border-radius: 3px;  /* Optional: makes the container corners rounded */
+    overflow: hidden;    /* Ensures child elements don’t overflow */
+}
+
+.checkbox-label {
+	padding-left: 0.5rem;
+	text-align: start;
+}
+
+.checked {
+	border: 2px solid #9bc3fe;
+}
+  
+
+
+.checkmark, .checkbox {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.checkbox-fill {
+	position: absolute;
+	background: #9bc3fe;
+	width: 100%;
+	height: 100%;
+	top: 100%;
+}
+
+.tick-mark {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.8);
+	z-index: 2;
+}
+
+.promoContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.5em;
+}
+
 
 /* ---- Tablet ---- */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
