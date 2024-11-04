@@ -89,7 +89,7 @@
 		</section>
 		<section class="transparantReporting">
 			<div class="annualReportDownload">
-				<img src="images/love-planet-quote-illustration.png" alt="">
+				<img src="images/love-planet-quote-illustration.png" alt="A cute illustration of the planet with a smiley face on it hugging a car">
 				<h2><strong>Transparent</strong> <br>sustainability reporting</h2>
 				<div>
 					<a href="" class="energyFriendlyButton">Download Annual Report</a>
@@ -99,7 +99,7 @@
 			<h2><strong>Improving</strong> our data, reporting, and alignment</h2>
 			<p>As we value making a positive contribution to the fight against climate change, we have begun our sustainability reporting journey to provide more disclosure for our stakeholders. Our goal is to become proactively compliant with EU and Dutch sustainability reporting regulations, including the Corporate Sustainability Reporting Directive (CSRD).</p>
 			<p>We are also working on reporting according to the GRI standards and the EU Taxonomy. Each year, we work to improve our data quality, reporting transparency and standards alignment. For more information, check out our latest annual or interim report.</p>
-			<img src="images/drivers-about-sac-srac-big-quote-illustration-get-the-app.png" alt="">
+			<img src="images/drivers-about-sac-srac-big-quote-illustration-get-the-app.png" alt="image of several sustainable development goals">
 		</section>
 		<section class="developmentGoals">
 			<h2>Linking to <strong>Sustainable Development Goals</strong></h2>
@@ -108,7 +108,7 @@
 		<section class="benchmarkSection">
 			<div>
 				<div class="image-holder-container">
-						<img src="images/drivers-about-sac-srac-big-quote-illustration-image-background-text-cta.png" alt="">
+						<img src="images/drivers-about-sac-srac-big-quote-illustration-image-background-text-cta.png" alt="Image of a Fastned charging hub at night">
 				</div>
 				<div class="benchmark-container">
 					<div class="benchmark">
@@ -125,7 +125,7 @@
 			</div>
 		</section>
 		<section class="aboutOurEnergy">
-				<img src="images/green-energy-quote-illustration.png" alt="">
+				<img src="images/green-energy-quote-illustration.png" alt="Illustration of a wavy landscape with in the front a fastned charging tree and in the background windmills">
 			<div>
 				<h2>About <strong>our <br>energy</strong></h2>
 				<p>We guarantee that 100% of the energy sold at Fastned stations comes from renewable sources in the form of solar and wind. We purchase Guarantees of Origin (GoO) for solar and wind throughout the year. We then double check these volumes after year end and, if needed, purchase additional GoOs.</p>
@@ -134,17 +134,56 @@
 		</section>
 		<section class="newsLetterSection">
 			<div>
-				<img src="images/newsletter-illustration.png" alt="">
+				<img src="images/newsletter-illustration.png" alt="Illustration of a group of cheering people at a fastned charging station">
 			</div>
 			<div>
 				<h4>Let's connect. Without the cable this time.</h4>
 				<p>Sign up to receive the latest updates and news about Fastned. And be the first to know about our promotions and events.</p>
-				<div>
-					<a href="" class="signUpButton">Sign me up</a>
+				<button class="signUpButton">
+					Sign me up
 					<img src="images/svg/pijltje-icon-fastned.svg" alt="pijltje">
-				</div>
+				</button>
 			</div>
 		</section>
+		<!-- Pop-up -->
+		<div class="popup-overlay hidden">
+			<div class="popup">
+				<h2>Sign Up for Our Newsletter</h2>
+				<form id="signupForm">
+					<div>
+						<label for="name">Name</label>
+						<input type="text" id="name" name="name" placeholder="Paul">
+						<p class="error-message hidden" >Please enter a valid name</p>
+					</div>
+					<div>
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email" placeholder="paul@fastned.nl">
+						<p class="error-message2 hidden" >Please enter a valid email address</p>
+					</div>
+					<div class="promoContainer">
+						<div class="checkbox-container">
+							<input type="checkbox" class="checkbox">
+							<span class="checkmark"></span>
+							<div class="checkbox-fill"></div>
+							<svg
+								width="19"
+								height="16"
+								viewBox="0 0 19 16"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								class="tick-mark"
+							>
+								<path d="M2 8.5L6.5 13L17.5 2" stroke="white" stroke-width="4" />
+							</svg>
+						</div>
+						<label class="checkbox-label">Send me promotions and offers as well</label>
+					</div>
+					<button type="submit">Send</button>
+				</form>
+				
+				<p class="success-message hidden">You are now signed up for our newsletter!</p>
+			</div>
+		</div>
     </main>
     <footer>
 		<nav class="footerMenu">
@@ -214,7 +253,12 @@
 			<a href="">Responsible Disclosure</a>
 		</div>
 	</footer>
-
+	<script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+      integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 	<script defer src="scripts/script.js"></script>
 </body>
 </html>

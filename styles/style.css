@@ -53,14 +53,7 @@ header {
 	z-index: 11;
 }
 
-/* header nav {
-	background-color: white;
-	width: 93%;
-	border-radius: 2em;
-	overflow: hidden;
-	height: 3.5em;
-	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.09);
-} */
+
 
 .headerNav {
 	display: flex;
@@ -75,10 +68,6 @@ header {
 	transition: all 0.5s cubic-bezier(0.785, 0.135, 0.01, 1);
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.09);
 }
-
-/* .menuClosed *:not(".headerNav > div:first-of-type"){
-	display: none;
-} */
 
 
 
@@ -97,7 +86,6 @@ header {
 .headerNav svg:nth-child(2) {
 	width: 7em;
 	margin-left: 0.4em;
-	/* background-color: aquamarine; */
 }
 
 .headerNav > div:first-of-type {
@@ -135,24 +123,12 @@ header {
 }
 
 
-/* nav:first-of-type div > button:nth-child(2) {
-	display: ;
-} */
-
-
-/* .menuExpanded div > button:nth-child(2) svg {
-	width: 1.65em;
-} */
 
 .headerNav div > button:nth-child(2) {
 	display: none;	
 }
 
 
-/* .menuExpanded div > button:nth-child(3) {
-
-	display: none;
-} */
 
 .headerNav div > button:nth-child(3) svg {
 	overflow: visible;
@@ -449,11 +425,6 @@ header {
 	align-items: flex-end;
 }
 
-/* .heroSection img {
-	height: auto;
-	object-fit: cover;
-} */
-
 
 .statsSection {
 	width: 90vw;
@@ -616,9 +587,6 @@ header {
 	scale: 1.9;
 }
 
-/* .backgroundBox {
-	position: relative;
-} */
 
 .yellowBox{
 	position: absolute;
@@ -649,9 +617,6 @@ header {
 	border-radius: 2.5em;
 }
 
-/* .backgroundBox:hover .yellowBox {
-    transform: scale(10);
-} */
 
 .howItWorksSection {
 	display: flex;
@@ -915,13 +880,6 @@ header {
 }
 
 
-
-
-
-
-
-
-
 .businessSection {
 	display: flex;
 	flex-direction: column;
@@ -1095,7 +1053,6 @@ footer {
 .footerMenu ul > li {
 	font-size: clamp(1.1em, 4vw, 4em);
 	font-weight: 800;
-	/* width: calc(inherit + 15%); */
 	display: flex;
 	flex-direction: row;
 	align-items:center;
@@ -1486,7 +1443,7 @@ footer {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     display: flex;
@@ -1511,6 +1468,7 @@ footer {
 .success-message {
     color: green;
     margin-top: 20px;
+	text-align: start;
 }
 
 .popup-overlay{
@@ -1542,6 +1500,9 @@ footer {
 	gap: 0.5em;
 	width: 100%;
 	font-size: 1.2em;
+}
+.hideSignupForm {
+	display: none !important;
 }
 
 #signupForm label {
@@ -1648,25 +1609,25 @@ input.invalid {
 }
 
 .checkbox {
-    position: absolute;  /* Makes the checkbox absolute */
+    position: absolute;  
     top: 0;
     left: 0;
-    width: inherit;  /* Makes the checkbox take the full width of its container */
-    height: inherit; /* Makes the checkbox take the full height of its container */
-    opacity: 0%;   /* Hides the default checkbox appearance */
-    cursor: pointer; /* Adds a pointer cursor for better UX */
+    width: inherit;  
+    height: inherit; 
+    opacity: 0%;   
+    cursor: pointer; 
 	z-index: 20;
 	pointer-events: none;
 
 }
 
 .checkbox-container {
-    position: relative;  /* Sets the container as a relative positioning context */
-    width: 1.5em;       /* Adjust the width as needed */
-    height: 1.5em;      /* Adjust the height as needed */
-    border: 2px solid #c5c5c5; /* Border for the container */
-    border-radius: 3px;  /* Optional: makes the container corners rounded */
-    overflow: hidden;    /* Ensures child elements don’t overflow */
+    position: relative;  
+    width: 1.5em;      
+    height: 1.5em;      
+    border: 2px solid #c5c5c5; 
+    border-radius: 3px;  
+    overflow: hidden;    
 }
 
 .checkbox-label {
@@ -1675,7 +1636,8 @@ input.invalid {
 }
 
 .checked {
-	border: 2px solid #9bc3fe;
+	transition: 1500ms ease;
+	border: 2px solid green;
 }
   
 
@@ -1690,7 +1652,7 @@ input.invalid {
 
 .checkbox-fill {
 	position: absolute;
-	background: #9bc3fe;
+	background: green;
 	width: 100%;
 	height: 100%;
 	top: 100%;
@@ -1729,7 +1691,7 @@ input.invalid {
 		gap: 1.3em;
 		margin: 0;
 		margin-top: 4em;
-		align-items: stretch; /* Ensure children stretch to the same height */
+		align-items: stretch; 
 	}
 	
 	.statsSection div:first-of-type {
@@ -1935,4 +1897,32 @@ input.invalid {
 		color: white;
 	}
 
+}
+
+
+
+/* reduce motion  */
+/* Bron = https://www.w3.org/WAI/WCAG22/Techniques/css/C39.html */
+
+@media (prefers-reduced-motion: reduce) {
+    
+	.ham2x rect:nth-child(1), .ham2x rect:nth-child(2), .ham2x rect:nth-child(3), .ham2x rect:nth-child(4) {
+		animation-duration: 1ms;
+	}
+
+	.ham2x-reverse rect:nth-child(1), .ham2x-reverse rect:nth-child(2), .ham2x-reverse rect:nth-child(3), .ham2x-reverse rect:nth-child(4) {
+		animation-duration: 1ms;
+	}
+
+	.statsSection div:first-of-type img  {
+		animation: swooshAnimatie 80s infinite;
+	}
+
+	.headerNav{
+		transition: none;
+	}
+	
+	.yellowBox{
+		display: none;
+	}
 }
