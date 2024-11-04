@@ -190,6 +190,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Verder vind ik dat ik mijn code een stuk eleganter kan opmaken, met meer comments tussen de verschillende CSS sections bijvoorbeeld. Dit vergeet ik vaak te doen als ik in een flow zit, maar achteraf alles bijwerken is dan een enorme klus. Ook dit wil ik graag verbeteren aan mijn codeer skills dit jaar.
 
+  Tot slot is het me helaas niet meer gelukt om binnen de tijd de "home"-knop te laten functioneren, relatief makkelijk te doen, maar helaas geen tijd meer voor. Dit zelfde geldt voor de mail sign-up knop op de tweede pagina, die werkt niet, maar ik weet alleen niet waarom.
+
   <img src="images/mdImages/vormgevingUitdaging.PNG" width="375px" alt="bummer">
 
 </details>
